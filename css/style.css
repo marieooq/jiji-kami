@@ -351,35 +351,15 @@ div#close {
     background-repeat: no-repeat;
 
     /*--- ウィンドウが画像の高さを超えるとき、動かないように固定 ---*/
-    /*background-attachment: fixed;*/
+/*    background-attachment: fixed;*/
     /*--- 画像を指定した領域に応じて、背景画像を調整 ---*/
-    background-size: cover;
+    background-size: contain;
+
 
     position: relative;
+    padding: 1%;
 
     z-index: 50;
-}
-
-#title {
-    font-size: 3em;
-    font-weight: normal;
-    position: absolute;
-    bottom: 11%;
-    left: 11%;
-    z-index: 70;
-}
-
-#title span#ten {
-    letter-spacing: -0.3em;
-}
-
-#title span#kami {
-    letter-spacing: 0.08em;
-}
-
-#title span#wo {
-    font-size: 0.9em;
-    letter-spacing: -0.01em;
 }
 
 
