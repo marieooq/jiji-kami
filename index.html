@@ -62,7 +62,7 @@
 
         <!--キャッチコピーここから-->
         <div id="catch" class="box-auto">
-            <p>年を重ねると、できないことが目立ってしまう。<br>
+            <p class="fade-text">年を重ねると、できないことが目立ってしまう。<br>
             頼まれ事はよく忘れてしまうし、家族の会話に入るのは一苦労。<br>
             <br>
             生きていれば当たり前にやってくる「老い」や「ボケ」は、<br>
@@ -100,31 +100,31 @@
                             <dd><span>Episode3</span>できなくなった日</dd>
                             </dl>
                        </div>
-                    
+
                         <div id="mokuji-img-inner" class="cf">
                             <!--目次画像１-->
-                            <div id="mokuji-img1">
+                            <div id="mokuji-img1" class="fade-img">
                             <img src="img/mokuji1.jpg" alt="尺八教室">
                             </div>
-                            
+
                             <div id="mokuji2-3-inner" class="cf">
                                 <!--目次画像２-->
-                                <div id="mokuji-img2">
+                                <div id="mokuji-img2" class="fade-img">
                                 <img src="img/mokuji2.jpg" alt="時計">
                                 </div>
                                 <!--目次画像３-->
-                                <div id="mokuji-img3">
+                                <div id="mokuji-img3" class="fade-img">
                                 <img src="img/mokuji3.jpg" alt="ケース（黄）">
                                 </div>
                             </div>
-                            
+
                             <div id="mokuji4-5-inner" class="cf">
                                 <!--目次画像４-->
-                                <div id="mokuji-img4">
+                                <div id="mokuji-img4" class="fade-img">
                                 <img src="img/mokuji4.jpg" alt="ケース（赤）">
                                 </div>
                                 <!--目次画像５-->
-                                <div id="mokuji-img5">
+                                <div id="mokuji-img5" class="fade-img">
                                 <img src="img/mokuji5.jpg" alt="働くじじ">
                                 </div>
                             </div>
@@ -145,8 +145,8 @@
                 <p>時間：11:00-19:00（最終日は 17:00まで）</p>
                 <p id="free-entrance">入場無料</p>
             </div>
-            
-             <div id="schedule-img-inner">
+
+             <div id="schedule-img-inner" class="fade-img">
                  <img src="img/date.jpg" alt="じじと酒">
              </div>
 
@@ -162,9 +162,9 @@
                 <h1 id="head-line">作者プロフィール</h1>
 
                 <div class="profile-comments">
-                       
+
                         <img src="img/profile.jpg" alt="渡部愛子" id="profile-photo">
-                    
+
                      <h2>渡部愛子 <br class="br-600"><span>わたべ あいこ</span></h2>
                     <p><span id="carning">1991</span>年埼玉生まれ。祖父の老いとボケに触れたことをきっかけに彼の人生美学を知る。約1年の記録と取材を元に企画展「じじ、紙を食う」を開催。
                         <!--facebookリンクここから-->
@@ -187,7 +187,7 @@
                     <p>山手線原宿駅 竹下口より徒歩1分</p>
                     <p>TEL：03-3423-8357</p>
                 </div>
-                
+
                 <div id="map-inner">
                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2208544479295!2d139.70174655067703!3d35.67156353801261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cbb1e25344b%3A0x9b6d612ea9a4a839!2z44Ku44Oj44Op44Oq44O844OP44K744Ks44Ov!5e0!3m2!1sja!2sjp!4v1509785675764" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
@@ -203,7 +203,7 @@
         <!--フッターここから-->
         <footer class="cf">
                <p>-お問い合わせはこちら-</p>
-                
+
                 <div id="sns-inner">
                     <!--facebook-->
                     <a href="https://www.facebook.com/petiteappe?fref=ts" target="_blank" id="inquiry-fb"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
@@ -213,7 +213,7 @@
                     <a href="https://twitter.com/jijikami_2017" target="_blank" id="inquiry-tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     <!--twitterここまで-->
                 </div>
-                
+
                 <!--コピーライトここから-->
                 <div class="copyright">
                     <p>&copy;2017 aiko watabe</p>
@@ -230,6 +230,9 @@
 
     <script src="js/script-1.js"></script>
 
+    <!-- じわっとさせるために新しいjsファイルを読み込む -->
+    <script src="js/jquery.inview.min.js"></script>
+
     <!--TOPに戻る -->
 <script>
     $(function() {
@@ -239,8 +242,26 @@
                 scrollTop: 0
             }, 800);
         });
+        // じわっとさせるためのjQuery（ここから）
+        $('.fade-img').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+            if(isInView){
+                $(this).stop().addClass('fade-stop');
+            }
+            else{
+                $(this).stop().removeClass('fade-stop');
+            }
+        });
+        $('.fade-text').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+            console.log(isInView);
+            if(isInView){
+                $(this).stop().addClass('fade-stop');
+            }
+            else{
+                $(this).stop().removeClass('fade-stop');
+            }
+        });
+        // じわっとさせるためのjQuery（ここまで）
     });
-
 </script>
 </body>
 

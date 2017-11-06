@@ -381,6 +381,27 @@ div#close {
     margin-top: 7.5rem;
 }
 
+/* じわっと表示させる（ここから） */
+.fade-img{
+    opacity: 0;
+    transition: 1.5s;
+    transform: translate(0,60px);
+    -webkit-transform: translate(0,60px);
+}
+.fade-text{
+    opacity: 0;
+    transition: 2.5s;
+    transform: translate(0,0px);
+    -webkit-transform: translate(0,0px);
+}
+.fade-stop{
+    opacity: 1.0;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+}
+/* じわっと表示させる（ここまで） */
+
+
 /********* 目次**********/
 
 /*目次*/
@@ -756,7 +777,7 @@ br.br-720{
     font-size: 3rem;
     color: #000;
     padding-bottom: 0.5rem;
-    
+
 }
 
 .top:hover {
@@ -842,7 +863,7 @@ body{
 #map-inner iframe{
     width: 360px;
 }
-    
+
 }
 /*********720px以下*********/
 
@@ -856,7 +877,7 @@ body{
 #toggle-btn i {
     font-size: 1.5rem;
 }
-    
+
 /*********日時と場所*********/
 
 /*日時と場所を左寄せにする*/
@@ -894,7 +915,7 @@ body{
 }
 
 /*********作者プロフィール*********/
-    
+
 /*プロフィール写真の上に余白を追加する*/
 #profile-photo {
     margin-top: 1rem;
@@ -910,14 +931,14 @@ body{
 br.br-720{
     display: block;
 }
-    
+
 /*********アクセス*********/
 
 /*アクセスを左寄せにする*/
 #access-inner h1 {
     text-align: left;
 }
- 
+
 /*ギャラリーハセガワの下に余白を追加*/
 #access-inner h2{
     margin-bottom: 1em;
@@ -945,7 +966,7 @@ margin-bottom: 2rem;
 #map-inner {
     float: none;
 }
-   
+
 }
 /*********600px以下(スマートフォン)*********/
 
@@ -969,14 +990,14 @@ body{
 #close a {
     font-size: 0.8rem;
 }
-    
+
 /*********トグルボタン*********/
 
 #toggle-btn {
     top: 8px;
     right: 15px;
 }
-    
+
 /* トップ画像　*/
 .topimg {
     background-image: url("../img/top2.jpg");
@@ -989,12 +1010,12 @@ body{
     font-size: 14px;
     line-height: 2;
 }
-    
+
 /*ヘッドライン */
 h1#head-line{
     font-size: 1.5rem;
 }
-    
+
 /*********目次*********/
 /*目次のアンダーラインを短くする*/
 #about #mokuji-inner h1 {
@@ -1068,7 +1089,7 @@ h1#head-line{
 #mokuji4-5-inner{
     margin-top: 1em;
 }
-    
+
 /*目次レイヤーと画像レイヤーを縦に並べる*/
 #about{
     position: static;
@@ -1080,7 +1101,7 @@ h1#head-line{
     margin-top: 0;
     position: static;
 }
-    
+
 /*********日時と場所*********/
 
 /*2017.11.25(土)-26(日)のサイズを変更*/
@@ -1104,7 +1125,7 @@ h1#head-line{
 #schedule-inner p#free-entrance{
     margin-bottom: 2rem;
 }
-    
+
 /*********作者プロフィール*********/
 
 /*プロフィール枠の余白を変更*/
@@ -1115,7 +1136,7 @@ h1#head-line{
     box-shadow: 5px 5px 5px rgba(51, 51, 49, 0.3);
     box-sizing: border-box;
 }
-    
+
 /*プロフィール写真をセンタリング*/
 #profile-photo {
     display: block;
@@ -1146,7 +1167,7 @@ br.br-600{
     margin-left: auto;
     margin-right: auto;
 }
-    
+
 /*facebookボタンの上に余白を追加*/
 .facebook {
     display: inline-block;
@@ -1180,7 +1201,7 @@ br.br-600{
     font-size: 2rem;
     color: #000;
     padding-bottom: 0.5rem;
-    
+
 }
 /*********フッター*********/
 
