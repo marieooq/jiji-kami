@@ -240,7 +240,7 @@ div#wrap {
 }
 
 /*タイトル */
-h1#head-line {
+h1.head-line {
     font-size: 2rem;
     font-weight: normal;
     display: inline-block;
@@ -640,6 +640,11 @@ div#close {
 
 
 /*********プロフィール*********/
+/*プロフィール枠の余白を狭くする*/
+#profile{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
 
 /*プロフィール写真*/
 #profile-photo {
@@ -1012,7 +1017,7 @@ body{
 }
 
 /*ヘッドライン */
-h1#head-line{
+h1.head-line{
     font-size: 1.5rem;
 }
 
