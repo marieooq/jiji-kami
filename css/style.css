@@ -1065,17 +1065,17 @@ h1#head-line{
 
 /*目次の画像４*/
 #mokuji-img4 img{
-    display: block;
-    width:auto;
-    height:auto;
-    max-width: 40%;
-    float: right;
+/*    display: block;*/
+/*    width:auto;*/
+/*    height:auto;*/
+    max-width: 43%;
+/*    float: right;*/
 }
 
 /*目次の画像５*/
 #mokuji-img5 img{
-    max-width: 50%;
-    height: auto;
+    max-width: 53%;
+/*    height: auto;*/
     float: left;
 }
 
@@ -1107,9 +1107,17 @@ h1#head-line{
 /*2017.11.25(土)-26(日)のサイズを変更*/
 #schedule-inner h2{
     font-size: 2rem;
+    letter-spacing: 0.005em;
+}
+#schedule-inner h2 span#one{
+    letter-spacing: 0.0025em;
+}
+#schedule-inner h2 span.day{
+    letter-spacing: 0.025em;
 }
 #schedule-inner h2 span#hyphen{
     font-size: 1.5rem;
+     letter-spacing: 0.0025em;
 }
 /*ギャラリーハセガワ以下の文字*/
 #schedule-inner p{
