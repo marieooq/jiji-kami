@@ -1,6 +1,6 @@
 
 var h = function(){
-   $(".fade-title").hide();  
+   $(".fade-title").hide();
 };
 
 var appear = function(){
@@ -28,4 +28,4 @@ appear();
 h();
 
 
-console.error('エラー');
+//console.error('エラー');
